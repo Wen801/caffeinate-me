@@ -5,8 +5,8 @@ Feature: Order a coffee
   I want to be able to order my coffee in advance
 
   Scenario: Buyer orders a coffee when they are close to the coffee shop
-    Given Cathy is 100 metres from the coffee shop
-    When Cathy orders a large cappuccino
+    Given Cathy is 1 metre from the coffee shop
+    When Cathy has ordered a large cappuccino
     Then Barry should receive the order
     And Barry should know that the order is Urgent
 
@@ -18,5 +18,5 @@ Feature: Order a coffee
 
     Examples:
     |distance | status |
-    | 50      | Urgent |
-    | 300     | Normal |
+    | 50.50      | Urgent |
+    | 300.50     | Normal |
